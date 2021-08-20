@@ -9,8 +9,7 @@ def test(s):
 
 
 
-def isValid(a):
-    c = {"(":")","[":"]","{":"}"}
+def isValid(a,c):
     print(a)
     if len(a)==0 or len(a)==2:
         return True
@@ -22,9 +21,9 @@ def isValid(a):
             i-=1
         else :
             if i == len(a)-1:
-                return isValid(a[1:i])
+                return isValid(a[1:i],c)
             else :
-                return isValid(a[1:i]),isValid(a[i+1:])
+                return isValid(a[1:i],c),isValid(a[i+1:],c)
 
 
 s="{()()[)]}"
