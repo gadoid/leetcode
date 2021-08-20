@@ -6,6 +6,6 @@ public class base {
     }   
     public static int bas(String s ){
         int max_len = 0 ;
-            
+        
     } 
 }
