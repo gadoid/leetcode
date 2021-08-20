@@ -6,10 +6,9 @@ public class test {
     }
     public static boolean isValid (String s) {
         while (s.contains("{}") || s.contains("[]") || s.contains("()")){
-            s.replaceAll("[{}]", "");
-            //s.replaceAll("[[]]", "");
-            s.replaceAll("[()]", "");
-            System.out.println(s);
+            s = s.replaceAll("\\{\\}", "");
+            s = s.replaceAll("\\[\\]", "");
+            s = s.replaceAll("\\(\\)", "");
         }
         return s.equals("") ;
     }
