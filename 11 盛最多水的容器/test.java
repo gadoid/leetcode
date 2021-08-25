@@ -6,9 +6,6 @@ class Solution {
         int len = height.length-1;
         while (low < high){
             int l = height[high]>height[low] ? height[low]:height[high] ;
-            int a1 = height[low];
-            int a2 = height[high];
-            System.out.println(a1+a2);
             area = area > len*l ? area:len*l;
             if (height[high]>height[low]) low++ ;
             else  high-- ;
